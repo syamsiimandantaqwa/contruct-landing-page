@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  height: 1000px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section::after{
+  content: "";
+  @apply inset-0 absolute bg-gradient-to-r from-secondary
+}
+
+.step::after{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 1rem white;
+  top:18px;
+  left: -8px;
+}
+
+
+@media (min-width: 768px){
+  .step::after{
+    top: calc(100% - 5px);
+    left: calc(50% - 8px);
+  }
+}
